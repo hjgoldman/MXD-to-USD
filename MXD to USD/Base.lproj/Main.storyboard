@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MXD_to_USD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MXD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-EK-fxo">
+                                <rect key="frame" x="87" y="178" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LjT-aY-IlH"/>
+                                    <constraint firstAttribute="height" constant="30" id="xut-PS-7WV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-yE-CYu">
+                                <rect key="frame" x="87" y="258" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KNq-Y7-Ih2"/>
+                                    <constraint firstAttribute="height" constant="30" id="gNs-iz-gDq"/>
+                                </constraints>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wfh-W5-pVY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kn-a8-Gwq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="SHl-Le-xFT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vh0-yE-CYu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4PQ-ue-9NO"/>
+                            <constraint firstItem="8Kn-a8-Gwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qhq-XW-fFp"/>
+                            <constraint firstItem="8Kn-a8-Gwq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="W8N-Pu-lFg"/>
+                            <constraint firstItem="4u7-EK-fxo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOZ-1W-Mkp"/>
+                            <constraint firstAttribute="trailing" secondItem="8Kn-a8-Gwq" secondAttribute="trailing" id="jyM-DI-sH6"/>
+                            <constraint firstItem="vh0-yE-CYu" firstAttribute="top" secondItem="4u7-EK-fxo" secondAttribute="bottom" constant="50" id="yKU-cN-pkG"/>
+                            <constraint firstItem="4u7-EK-fxo" firstAttribute="top" secondItem="8Kn-a8-Gwq" secondAttribute="bottom" constant="28" id="zJT-cF-eR9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mxdTextField" destination="4u7-EK-fxo" id="63r-df-X69"/>
+                        <outlet property="usdLabel" destination="8Kn-a8-Gwq" id="eyC-uG-F44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
